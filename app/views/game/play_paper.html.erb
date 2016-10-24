@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>You Played Paper</title>
+
+  <link rel="stylesheet" href="public/assets/css/bootstrapp.css">
+
+</head>
+
+<%= computer_move = ["rock", "paper", "scissors"].sample %>
+
+<body>
+  <div class="container">
+    <hr>
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 col-xs-12">
+          <div class="btn-group btn-group-justified">
+            <a href="/rock" class="btn btn-block btn-primary">
+                Play Rock
+              </a>
+            <a href="/paper" class="btn btn-block btn-info">
+                Play Paper
+              </a>
+            <a href="/scissors" class="btn btn-block btn-primary">
+                Play Scissors
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr>
+<% if computer_move == "paper" %>
+        <div class="row">
+          <div class = "col-md-4 col-md-offset-2 col-xs-6">
+            <div class="panel panel-success">
+              <h2 class="panel-title text-center">
+                You Played Paper!
+              </h2>
+            </div>
+            <div class="panel-body">
+              <img class="img-responsive" src="/assets/images/paper.png"
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-md-offset col-xs-6">
+          <div class="panel panel-success">
+            <h2 class="panel-title text-center">
+              Computer Played Paper!
+            </h2>
+          </div>
+          <div class="panel-body">
+            <img class="img-responsive" src="/assets/images/paper.png"
+          </div>
+        </div>
+  <% end %>
+
+<% if computer_move == "scissors" %>
+  <div class="row">
+    <div class = "col-md-4 col-md-offset-2 col-xs-6">
+      <div class="panel panel-danger">
+        <h2 class="panel-title text-center">
+          You Played Paper!
+        </h2>
+      </div>
+      <div class="panel-body">
+        <img class="img-responsive" src="/assets/images/paper.png"
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-md-offset col-xs-6">
+    <div class="panel panel-success">
+      <h2 class="panel-title text-center">
+        Computer Played Scissors!
+      </h2>
+    </div>
+    <div class="panel-body">
+      <img class="img-responsive" src="/assets/images/scissors.png"
+    </div>
+  </div>
+    <%end%>
+    <% if computer_move == "rock" %>
+    <div class="row">
+      <div class = "col-md-4 col-md-offset-2 col-xs-6">
+        <div class="panel panel-success">
+          <h2 class="panel-title text-center">
+            You Played Paper!
+          </h2>
+        </div>
+        <div class="panel-body">
+          <img class="img-responsive" src="/assets/images/paper.png"
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-md-offset col-xs-6">
+      <div class="panel panel-danger">
+        <h2 class="panel-title text-center">
+          Computer Played Rock!
+        </h2>
+      </div>
+      <div class="panel-body">
+        <img class="img-responsive" src="/assets/images/rock.png"
+      </div>
+    </div>
+    <%end%>

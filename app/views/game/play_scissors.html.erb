@@ -1,0 +1,39 @@
+<head>
+
+<title>You Played Scissors</title>
+
+<body>
+  <div class="container">
+    <hr>
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 col-xs-12">
+          <div class="btn-group btn-group-justified">
+            <a href="/rock" class="btn btn-block btn-primary">
+                Play Rock
+              </a>
+            <a href="/paper" class="btn btn-block btn-primary">
+                Play Paper
+              </a>
+            <a href="/scissors" class="btn btn-block btn-info">
+                Play Scissors
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+<p> You Played Scissors! </p>
+
+<p> The Computer Played
+  <%= computer_move = ["rock", "paper", "scissors"].sample %> </p>
+
+<% if computer_move == "scissors" %>
+      It's a Tie
+      <%end%>
+    <% if computer_move == "rock" %>
+        You Lose
+      <%end%>
+    <% if computer_move == "paper" %>
+        You Win
+      <%end%>
