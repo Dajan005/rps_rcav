@@ -1,42 +1,150 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>You Played Rock</title>
+
+<title>You Played Rock</title>
+
   <link rel="stylesheet" href="public/assets/css/bootstrapp.css">
 
 </head>
 
+<%= computer_move = ["rock", "paper", "scissors"].sample %>
 <body>
   <div class="container">
     <hr>
-      <div class="row">
+    <div class="row">
 
-        <div class="col-md-8 col-md-offset-2 col-xs-12">
-          <div class="btn-group btn-group-justified">
-            <a href="/rock" class="btn btn-block btn-info">
-                Play Rock
-              </a>
-            <a href="/paper" class="btn btn-block btn-primary">
-                Play Paper
-              </a>
-            <a href="/scissors" class="btn btn-block btn-primary">
-                Play Scissors
-              </a>
-            </div>
+      <div class="col-md-8 col-md-offset-2 col-xs-12">
+        <div class="btn-group btn-group-justified">
+          <a href="/rock" class="btn btn-block btn-info">
+            Play Rock
+          </a>
+          <a href="/paper" class="btn btn-block btn-primary">
+            Play Paper
+          </a>
+          <a href="/scissors" class="btn btn-block btn-primary">
+            Play Scissors
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <% if computer_move == "rock" %>
+    <div class="row">
+      <div class = "col-md-4 col-md-offset-2 col-xs-6">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h2 class="panel-title text-center">
+              You Played Rock!
+            </h2>
+          </div>
+          <div class="panel-body">
+            <img class="img-responsive" src="/assets/images/rock.png">
           </div>
         </div>
-        <hr>
-<p> You Played Rock! </p>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h2 class="panel-title text-center">
+              Computer Played Rock!
+            </h2>
+          </div>
+          <div class="panel-body">
+            <img class="img-responsive" src="/assets/images/rock.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well text-center"
+        <h1>
+          <span class="label label-success">
+            You Tied!
+          </span>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <% end %>
 
-<p> The Computer Played
-  <%= computer_move = ["rock", "paper", "scissors"].sample %> </p>
-
-<% if computer_move == "rock" %>
-      It's a Tie
-      <%end%>
-    <% if computer_move == "paper" %>
-        You Lose
-      <%end%>
-    <% if computer_move == "scissors" %>
-        You Win
-      <%end%>
+  <% if computer_move == "paper" %>
+  <div class="row">
+    <div class = "col-md-4 col-md-offset-2 col-xs-6">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h2 class="panel-title text-center">
+            You Played Rock!
+          </h2>
+        </div>
+        <div class="panel-body">
+          <img class="img-responsive" src="/assets/images/rock.png">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-xs-6">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h2 class="panel-title text-center">
+            Computer Played Paper!
+          </h2>
+        </div>
+        <div class="panel-body">
+          <img class="img-responsive" src="/assets/images/paper.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well text-center"
+      <h1>
+        <span class="label label-danger">
+          You Lose!
+        </span>
+      </h1>
+    </div>
+  </div>
+</div>
+<%end%>
+<% if computer_move == "scissors" %>
+<div class="row">
+  <div class = "col-md-4 col-md-offset-2 col-xs-6">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">
+          You Played Rock!
+        </h2>
+      </div>
+      <div class="panel-body">
+        <img class="img-responsive" src="/assets/images/rock.png">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-xs-6">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">
+          Computer Played Scissors!
+        </h2>
+      </div>
+      <div class="panel-body">
+        <img class="img-responsive" src="/assets/images/scissors.png">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="well text-center"
+    <h1>
+      <span class="label label-success">
+        You Win!
+      </span>
+    </h1>
+  </div>
+</div>
+</div>
+<%end%>
